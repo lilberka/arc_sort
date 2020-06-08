@@ -18,7 +18,7 @@ def arc_sort(condition, number):
         soup = BeautifulSoup(html, 'html.parser')
 
         attributes = []
-        td = [i.string for i in soup.find_all('td')[14:-3]]   #header,footerの除去
+        td = [i.string for i in soup.find_all('td')[14:-3]]
         links = [i.get('href') for i in soup.find_all('a')][23:]
         tmp_atrs = [td[i:i+7] for i in range(0, len(td), 7)]
 
